@@ -1,0 +1,202 @@
+{
+	"info": {
+		"_postman_id": "8afd9ce2-7493-4720-af3a-afee9bf51026",
+		"name": "fakeRest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26654361"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Laptop\",\n    \"price\": 899.99,\n    \"description\": \"Powerful laptop\",\n    \"category\": \"Electronics\",\n    \"image\": \"laptop.png\",\n    \"rating\": {\n        \"rate\": 4.5,\n        \"contador\": 50\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/fakestoreapi.com/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fakestoreapi.com",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"title\": \"Smartphone\",\n    \"price\": 599.99,\n    \"description\": \"High-end smartphone\",\n    \"category\": \"Electronics\",\n    \"image\": \"smartphone.png\",\n    \"rating\": {\n        \"rate\": 4.8,\n        \"contador\": 30\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/fakestoreapi.com/products/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fakestoreapi.com",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/fakestoreapi.com/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fakestoreapi.com",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter by ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/fakestoreapi.com/products/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fakestoreapi.com",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find by PrecioMinimo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/fakestoreapi.com/products/busquedaPorPrecioMayorA?precioMinimo=200",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fakestoreapi.com",
+						"products",
+						"busquedaPorPrecioMayorA"
+					],
+					"query": [
+						{
+							"key": "precioMinimo",
+							"value": "200"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/fakestoreapi.com/products/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fakestoreapi.com",
+						"products",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find by PrecioEntre",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/fakestoreapi.com/Entre?precioMinimo=100&precioMaximo=1000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fakestoreapi.com",
+						"Entre"
+					],
+					"query": [
+						{
+							"key": "precioMinimo",
+							"value": "100"
+						},
+						{
+							"key": "precioMaximo",
+							"value": "1000"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
